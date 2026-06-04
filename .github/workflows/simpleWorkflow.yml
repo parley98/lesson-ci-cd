@@ -1,7 +1,7 @@
 name: workflow overview
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
 
 jobs:
   simple_job:
@@ -11,6 +11,3 @@ jobs:
       - name: name of the step
         id: stepId
         run: echo "Hello world"
-      - name: step with another shell
-        id: shellStep
-        run: print("This should be run on python")
