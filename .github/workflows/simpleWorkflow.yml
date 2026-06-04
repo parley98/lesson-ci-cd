@@ -2,8 +2,21 @@ name: workflow overview
 
 on:
   workflow_dispatch:
+  push: 
+    branches: 
+      - main
 
 jobs:
+  my_self_hoisted:
+    name: my self hoisted job
+    runs-on: self-hosted
+    steps:
+      - name: step for self hoisted
+        id: selfHoistedId
+        shell: sh
+        run: |
+          echo this is multiple comments
+          echo this job has been execute from self hoisted
   simple_job:
     name: my simple job name
     runs-on: ubuntu-latest
